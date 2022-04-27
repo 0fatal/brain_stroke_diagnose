@@ -7,6 +7,7 @@ on:
       - '**.md'
       - '**.spec.js'
       - '.idea'
+      - '.vscode'
       - '.gitignore'
       - '.github/**'
       - '!.github/workflows/release.yml'
@@ -84,7 +85,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ windows-latest ]
+        os: [ windows-latest, ubuntu-latest, windows-latest ]
     #    To compile the application for different platforms, use:
     #    os: [ macos-latest, ubuntu-latest, windows-latest ]
 
@@ -93,13 +94,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v2
+      - uses: pnpm/action-setup@v2.1.0
         with:
-          node-version: 16 # Need for npm >=7.7
-          cache: 'npm'
+          version: latest
+          run_install: true
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm ci
 
       # The easiest way to transfer release notes to a compiled application is create `release-notes.md` in the build resources.
       # See https://github.com/electron-userland/electron-builder/issues/1511#issuecomment-310160119

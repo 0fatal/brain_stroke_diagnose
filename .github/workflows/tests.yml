@@ -6,13 +6,13 @@ on:
     paths:
       - 'packages/**'
       - 'tests/**'
-      - 'package-lock.json'
+      - 'pnpm-lock.yaml'
       - '.github/workflows/tests.yml'
   pull_request:
     paths:
       - 'packages/**'
       - 'tests/**'
-      - 'package-lock.json'
+      - 'pnpm-lock.yaml'
       - '.github/workflows/tests.yml'
 
 defaults:
@@ -25,36 +25,36 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: pnpm/action-setup@v2.1.0
         with:
-          node-version: 16
-          cache: 'npm'
-      - run: npm ci
-      - run: npm run test:main
+          version: latest
+          run_install: true
+      - run: pnpm ci
+      - run: pnpm run test:main
 
 
   preload:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: pnpm/action-setup@v2.1.0
         with:
-          node-version: 16
-          cache: 'npm'
-      - run: npm ci
-      - run: npm run test:preload
+          version: latest
+          run_install: true
+      - run: pnpm ci
+      - run: pnpm run test:preload
 
 
   renderer:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: pnpm/action-setup@v2.1.0
         with:
-          node-version: 16
-          cache: 'npm'
-      - run: npm ci
-      - run: npm run test:renderer
+          version: latest
+          run_install: true
+      - run: pnpm ci
+      - run: pnpm run test:renderer
 
 
   e2e:
@@ -65,15 +65,15 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: pnpm/action-setup@v2.1.0
         with:
-          node-version: 16
-          cache: 'npm'
-      - run: npm ci
+          version: latest
+          run_install: true
+      - run: pnpm ci
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
       - run: npx playwright install --with-deps chromium
       - run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- npm run test:e2e
         if: matrix.os == 'ubuntu-latest'
-      - run: npm run test:e2e
+      - run: pnpm run test:e2e
         if: matrix.os != 'ubuntu-latest'
