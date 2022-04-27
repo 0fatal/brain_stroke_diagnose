@@ -29,7 +29,7 @@ jobs:
         with:
           version: latest
           run_install: true
-      - run: pnpm install -P
+      - run: pnpm i
       - run: pnpm run test:main
 
 
@@ -41,7 +41,7 @@ jobs:
         with:
           version: latest
           run_install: true
-      - run: pnpm install -P
+      - run: pnpm i
       - run: pnpm run test:preload
 
 
@@ -53,7 +53,7 @@ jobs:
         with:
           version: latest
           run_install: true
-      - run: pnpm install -P
+      - run: pnpm i
       - run: pnpm run test:renderer
 
 
@@ -69,7 +69,7 @@ jobs:
         with:
           version: latest
           run_install: true
-      - run: pnpm install -P
+      - run: pnpm i
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
       - run: npx playwright install --with-deps chromium

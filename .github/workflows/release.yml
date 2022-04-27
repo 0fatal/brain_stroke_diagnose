@@ -100,7 +100,7 @@ jobs:
           run_install: true
 
       - name: Install dependencies
-        run: pnpm install -P
+        run: pnpm i
 
       # The easiest way to transfer release notes to a compiled application is create `release-notes.md` in the build resources.
       # See https://github.com/electron-userland/electron-builder/issues/1511#issuecomment-310160119

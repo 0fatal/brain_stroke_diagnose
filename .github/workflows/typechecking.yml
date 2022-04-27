@@ -34,6 +34,6 @@ jobs:
 
       # TODO: Install not all dependencies, but only those required for this workflow
       - name: Install dependencies
-        run: pnpm install -P
+        run: pnpm i
 
       - run: pnpm run typecheck
