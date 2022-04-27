@@ -8,17 +8,9 @@
     "strict": true,
     "isolatedModules": true,
 
-    "types" : ["node"],
-
-    "baseUrl": ".",
+    "types": ["node"],
+    "baseUrl": "."
   },
-  "include": [
-    "src/**/*.ts",
-    "contracts.d.ts",
-    "../../types/**/*.d.ts"
-  ],
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ]
+  "include": ["src/**/*.ts", "contracts.d.ts", "../../types/**/*.d.ts"],
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"]
 }

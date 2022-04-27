@@ -3,13 +3,13 @@
     "browser": true,
     "node": false
   },
-  "extends": [
-    /** @see https://eslint.vuejs.org/rules/ */
-    "plugin:vue/vue3-recommended"
-  ],
+  "extends": ["plugin:react/recommended", "plugin:prettier/recommended"],
   "parserOptions": {
     "parser": "@typescript-eslint/parser",
     "ecmaVersion": 12,
     "sourceType": "module"
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off"
   }
 }

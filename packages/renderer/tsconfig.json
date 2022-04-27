@@ -6,15 +6,20 @@
     "moduleResolution": "Node",
     "skipLibCheck": true,
     "strict": true,
+    "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
 
-    "types" : ["node"],
+    "types": ["node"],
     "baseUrl": ".",
+    "useDefineForClassFields": true,
+    "noEmit": true,
     "paths": {
-      "/@/*": [
-        "./src/*"
-      ]
+      "/@/*": ["./src/*"]
     },
+    "jsx": "react-jsx",
+
     "lib": ["ESNext", "dom", "dom.iterable"]
   },
 
@@ -26,8 +31,5 @@
     "../../types/**/*.d.ts",
     "../preload/contracts.d.ts"
   ],
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.test.ts",
-  ]
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"]
 }
