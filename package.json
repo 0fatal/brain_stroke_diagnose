@@ -1,5 +1,5 @@
 {
-  "name": "vite-electron-builder",
+  "name": "brain_stroke_diagnose",
   "private": true,
   "engines": {
     "node": ">=v16.13",
