@@ -1,4 +1,4 @@
-import { RouteObject, useRoutes } from 'react-router-dom';
+import { Navigate, RouteObject, useRoutes } from 'react-router-dom';
 import ZLayout from '@/layout';
 import DiagnosePage from '@/pages/Diagnose';
 import RecordPage from '@/pages/Record';
@@ -57,7 +57,12 @@ const routes: RouteObject[] = [
       },
       {
         path: '/analysis',
-        element: <AnalysisPage />
+        element: <AnalysisPage />,
+        index: true
+      },
+      {
+        path: '/',
+        element: <Navigate to="/analysis" replace />
       }
     ]
   }
