@@ -2,7 +2,9 @@ import { Layout } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
 import ZAside from './components/ZAside/ZAside';
 import ZHeader from './components/ZHeader/ZHeader';
-const { Header, Sider, Content } = Layout;
+import './index.scss';
+
+const { Sider, Content } = Layout;
 
 const ZLayout = () => {
   const route = useNavigate();
@@ -14,7 +16,7 @@ const ZLayout = () => {
       </Sider>
       <Layout>
         <ZHeader />
-        <Content className="p-[10px]">
+        <Content className="p-[10px]" id="main-content">
           <Outlet />
         </Content>
       </Layout>

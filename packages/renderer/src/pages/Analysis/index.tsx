@@ -43,9 +43,9 @@ const AnalysisPage = () => {
         </div>
       </Card>
       <Card title="检测人次波动情况">
-        <div className="flex flex-col items-center space-y-5">
+        <div className="flex flex-col items-center space-y-10">
           <Line {...config} className="w-full" />
-          <div className="font-bold space-x-1">
+          <div className="font-bold space-x-10">
             <span className="text-gray-500">按周</span>
             <span>按月</span>
           </div>
