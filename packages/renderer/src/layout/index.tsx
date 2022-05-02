@@ -14,7 +14,7 @@ const ZLayout = () => {
       </Sider>
       <Layout>
         <ZHeader />
-        <Content>
+        <Content className="p-[10px]">
           <Outlet />
         </Content>
       </Layout>
