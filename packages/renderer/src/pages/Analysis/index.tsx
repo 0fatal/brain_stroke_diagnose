@@ -1,6 +1,8 @@
 import QuickOperation from '@/components/QuickOperation/QuickOperation';
 import { Line } from '@ant-design/charts';
 import { Card, Space } from 'antd';
+import IconRecordCount from './assets/icon_record_count.png';
+import IconDeviceCount from './assets/icon_device_count.png';
 
 const AnalysisPage = () => {
   const data = [
@@ -23,19 +25,19 @@ const AnalysisPage = () => {
       <QuickOperation />
       <Card title="系统概况">
         <div className="flex space-x-3">
-          <div className="bg-[#FF7970] p-[15px] w-[340px] rounded-md">
-            <img />
-            <div className="text-white">
+          <div className="bg-[#FF7970] p-[15px] w-[340px] rounded-md flex items-center">
+            <img src={IconRecordCount} />
+            <div className="text-white ml-4">
               <h3 className="text-white">总诊断人次</h3>
-              <h1 className="text-white">399人</h1>
+              <h1 className="text-white text-[24px]">399 人</h1>
             </div>
           </div>
 
-          <div className="bg-[#FFD344] p-[15px] w-[340px] rounded-md">
-            <img />
-            <div className="text-white">
+          <div className="bg-[#FFD344] p-[15px] w-[340px] rounded-md flex items-center">
+            <img src={IconDeviceCount} />
+            <div className="text-white  ml-4">
               <h3 className="text-white">设备数量</h3>
-              <h1 className="text-white">399人</h1>
+              <h1 className="text-white text-[24px]">5 台</h1>
             </div>
           </div>
         </div>
