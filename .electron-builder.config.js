@@ -1,9 +1,11 @@
-if (process.env.VITE_APP_VERSION === undefined) {
-  const now = new Date();
-  process.env.VITE_APP_VERSION = `${now.getUTCFullYear() - 2000}.${
-    now.getUTCMonth() + 1
-  }.${now.getUTCDate()}-${now.getUTCHours() * 60 + now.getUTCMinutes()}`;
-}
+const { version } = require('./package.json')
+
+// if (process.env.VITE_APP_VERSION === undefined) {
+//   const now = new Date()
+//   process.env.VITE_APP_VERSION = `${now.getUTCFullYear() - 2000}.${
+//     now.getUTCMonth() + 1
+//   }.${now.getUTCDate()}-${now.getUTCHours() * 60 + now.getUTCMinutes()}`
+// }
 
 /**
  * @type {import('electron-builder').Configuration}
@@ -11,15 +13,15 @@ if (process.env.VITE_APP_VERSION === undefined) {
  */
 const config = {
   directories: {
-    output: "dist",
-    buildResources: "buildResources",
+    output: 'dist',
+    buildResources: 'buildResources'
   },
-  files: ["packages/**/dist/**"],
-  appId: "com.zxy.${name}",
-  productName: "脑卒中辅助诊断医疗系统",
+  files: ['packages/**/dist/**'],
+  appId: 'com.zxy.${name}',
+  productName: '脑卒中辅助诊断医疗系统',
   extraMetadata: {
-    version: process.env.VITE_APP_VERSION,
-  },
-};
+    version: version
+  }
+}
 
-module.exports = config;
+module.exports = config
