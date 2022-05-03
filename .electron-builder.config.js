@@ -18,7 +18,7 @@ const config = {
   },
   files: ['packages/**/dist/**'],
   appId: `com.zxy.${name}`,
-  productName: '脑卒中辅助诊断医疗系统',
+  productName: 'BrainStrokeDiagnose',
   extraMetadata: {
     version: version
   }
