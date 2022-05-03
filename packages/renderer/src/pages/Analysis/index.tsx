@@ -25,7 +25,7 @@ const AnalysisPage = () => {
       <QuickOperation />
       <Card title="系统概况">
         <div className="flex space-x-3">
-          <div className="bg-[#FF7970] p-[15px] w-[340px] rounded-md flex items-center">
+          <div className="bg-[#FF7970] p-[15px] w-[340px] rounded-md flex items-center ">
             <img src={IconRecordCount} />
             <div className="text-white ml-4">
               <h3 className="text-white">总诊断人次</h3>
