@@ -1,5 +1,6 @@
 {
   "name": "brain_stroke_diagnose",
+  "version": "0.0.1",
   "private": true,
   "engines": {
     "node": ">=v16.13",

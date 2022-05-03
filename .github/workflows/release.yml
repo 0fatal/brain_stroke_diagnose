@@ -112,7 +112,7 @@ jobs:
 
       # Compile app and upload artifacts
       - name: Compile & release Electron app
-        uses: ZacharyWin/z-electron-builder@v0.0.1
+        uses: ZacharyWin/z-electron-builder@v0.0.2
         env:
           VITE_APP_VERSION: ${{ needs.draft.outputs.version }}
         with:
