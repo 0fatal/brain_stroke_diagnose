@@ -1,10 +1,10 @@
-import './App.css';
-import useAppRoutes from './router';
+import './App.css'
+import useAppRoutes from './router'
 
 function App() {
-  const AppRoutes = useAppRoutes();
+  const AppRoutes = useAppRoutes()
 
-  return <div className="App">{AppRoutes}</div>;
+  return <div className="App">{AppRoutes}</div>
 }
 
-export default App;
+export default App

@@ -1,8 +1,8 @@
-import QuickOperation from '@/components/QuickOperation/QuickOperation';
-import { Line } from '@ant-design/charts';
-import { Card, Space } from 'antd';
-import IconRecordCount from './assets/icon_record_count.png';
-import IconDeviceCount from './assets/icon_device_count.png';
+import QuickOperation from '@/components/QuickOperation/QuickOperation'
+import { Line } from '@ant-design/charts'
+import { Card } from 'antd'
+import IconRecordCount from './assets/icon_record_count.png'
+import IconDeviceCount from './assets/icon_device_count.png'
 
 const AnalysisPage = () => {
   const data = [
@@ -13,12 +13,12 @@ const AnalysisPage = () => {
     { date: '05-05', value: 40 },
     { date: '05-06', value: 60 },
     { date: '05-07', value: 81 }
-  ];
+  ]
   const config = {
     data,
     xField: 'date',
     yField: 'value'
-  };
+  }
 
   return (
     <div className="space-y-3">
@@ -52,7 +52,7 @@ const AnalysisPage = () => {
         </div>
       </Card>
     </div>
-  );
-};
+  )
+}
 
-export default AnalysisPage;
+export default AnalysisPage

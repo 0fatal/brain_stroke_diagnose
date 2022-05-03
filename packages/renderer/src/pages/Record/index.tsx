@@ -1,7 +1,7 @@
-import QuickOperation from '@/components/QuickOperation/QuickOperation';
-import { DownloadOutlined, EyeOutlined, PlusOutlined, SearchOutlined } from '@ant-design/icons';
-import { Button, Card, Form, Input, Select, Table } from 'antd';
-import { useState } from 'react';
+import QuickOperation from '@/components/QuickOperation/QuickOperation'
+import { DownloadOutlined, EyeOutlined, PlusOutlined, SearchOutlined } from '@ant-design/icons'
+import { Button, Card, Form, Input, Select, Table } from 'antd'
+import { useState } from 'react'
 
 const RecordPage = () => {
   const columns = [
@@ -45,18 +45,18 @@ const RecordPage = () => {
               </div>
             </Button>
           </div>
-        );
+        )
       }
     }
-  ];
+  ]
 
-  const data = [];
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  const data = []
+  const [selectedRowKeys, setSelectedRowKeys] = useState([])
 
   const rowSelection = {
     selectedRowKeys,
     onChange: (selectedRowKeys: any) => setSelectedRowKeys(selectedRowKeys)
-  };
+  }
 
   for (let i = 0; i < 14; i++) {
     data.push({
@@ -67,7 +67,7 @@ const RecordPage = () => {
       time: '2022-3-6 21:00:00',
       level: '较严重',
       rate: '30%'
-    });
+    })
   }
 
   return (
@@ -139,7 +139,7 @@ const RecordPage = () => {
         <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
       </Card>
     </div>
-  );
-};
+  )
+}
 
-export default RecordPage;
+export default RecordPage

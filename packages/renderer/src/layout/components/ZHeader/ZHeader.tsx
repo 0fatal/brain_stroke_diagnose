@@ -1,11 +1,8 @@
-import { getRouteTitle } from '@/router';
-import { Layout, Menu } from 'antd';
-import { useLocation } from 'react-router-dom';
-
-const { Header } = Layout;
+import { getRouteTitle } from '@/router'
+import { useLocation } from 'react-router-dom'
 
 const ZHeader = () => {
-  const location = useLocation();
+  const location = useLocation()
 
   return (
     <div className="!bg-white">
@@ -17,7 +14,7 @@ const ZHeader = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ZHeader;
+export default ZHeader

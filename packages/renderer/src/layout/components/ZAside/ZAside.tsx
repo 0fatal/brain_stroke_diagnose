@@ -4,15 +4,15 @@ import {
   MobileOutlined,
   ReconciliationOutlined,
   SettingOutlined
-} from '@ant-design/icons';
-import { Layout, Menu } from 'antd';
-import { useLocation, useNavigate } from 'react-router-dom';
+} from '@ant-design/icons'
+import { Layout, Menu } from 'antd'
+import { useLocation, useNavigate } from 'react-router-dom'
 
-const { Header } = Layout;
+const { Header } = Layout
 
 const ZAside = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
+  const location = useLocation()
+  const navigate = useNavigate()
 
   return (
     <Layout>
@@ -25,8 +25,8 @@ const ZAside = () => {
         mode="inline"
         defaultSelectedKeys={[location.pathname]}
         onClick={(e) => {
-          console.log(e);
-          navigate(e.key);
+          console.log(e)
+          navigate(e.key)
         }}
         items={[
           { label: '数据概况', icon: <HomeOutlined />, key: '/analysis' },
@@ -55,7 +55,7 @@ const ZAside = () => {
         ]}
       />
     </Layout>
-  );
-};
+  )
+}
 
-export default ZAside;
+export default ZAside

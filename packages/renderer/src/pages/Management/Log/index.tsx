@@ -1,7 +1,7 @@
-import QuickOperation from '@/components/QuickOperation/QuickOperation';
-import { EyeOutlined, RedoOutlined, SearchOutlined } from '@ant-design/icons';
-import { Button, Card, Form, Input, Select, Table } from 'antd';
-import { useState } from 'react';
+import QuickOperation from '@/components/QuickOperation/QuickOperation'
+import { SearchOutlined } from '@ant-design/icons'
+import { Button, Card, Form, Input, Table } from 'antd'
+import { useState } from 'react'
 
 const LogManagementPage = () => {
   const columns = [
@@ -25,15 +25,15 @@ const LogManagementPage = () => {
       title: '时间',
       dataIndex: 'time'
     }
-  ];
+  ]
 
-  const data = [];
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  const data = []
+  const [selectedRowKeys, setSelectedRowKeys] = useState([])
 
   const rowSelection = {
     selectedRowKeys,
     onChange: (selectedRowKeys: any) => setSelectedRowKeys(selectedRowKeys)
-  };
+  }
 
   for (let i = 0; i < 14; i++) {
     data.push({
@@ -42,7 +42,7 @@ const LogManagementPage = () => {
       ip: '192.168.37.29',
       operation: '平台数据概览查看',
       time: '2022-3-6 21:00:00'
-    });
+    })
   }
 
   return (
@@ -66,7 +66,7 @@ const LogManagementPage = () => {
         <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
       </Card>
     </div>
-  );
-};
+  )
+}
 
-export default LogManagementPage;
+export default LogManagementPage

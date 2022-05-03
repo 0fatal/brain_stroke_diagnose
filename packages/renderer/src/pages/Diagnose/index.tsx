@@ -1,4 +1,4 @@
-import { Button, Card, Divider, Image, Table } from 'antd';
+import { Button, Card, Divider, Image, Table } from 'antd'
 
 const DiagnosePage = () => {
   const columns = [
@@ -22,12 +22,12 @@ const DiagnosePage = () => {
       dataIndex: 'p',
       align: 'center',
       render: (p: string) => {
-        return <span className="text-[#CAAB3A]">{p}</span>;
+        return <span className="text-[#CAAB3A]">{p}</span>
       }
     }
-  ];
+  ]
 
-  const data = [];
+  const data = []
 
   for (let i = 0; i < 10; i++) {
     data.push({
@@ -35,7 +35,7 @@ const DiagnosePage = () => {
       distance: '113·146',
       diameter: Math.floor(Math.random() * 10 + 1),
       p: Math.random() > 0.5 ? '73%' : '13%'
-    });
+    })
   }
 
   return (
@@ -115,7 +115,7 @@ const DiagnosePage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default DiagnosePage;
+export default DiagnosePage

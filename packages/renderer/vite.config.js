@@ -1,11 +1,11 @@
 /* eslint-env node */
 
-import { chrome } from '../../.electron-vendors.cache.json';
-import { join } from 'path';
-import { builtinModules } from 'module';
-import react from '@vitejs/plugin-react';
+import { chrome } from '../../.electron-vendors.cache.json'
+import { join } from 'path'
+import { builtinModules } from 'module'
+import react from '@vitejs/plugin-react'
 
-const PACKAGE_ROOT = __dirname;
+const PACKAGE_ROOT = __dirname
 
 /**
  * @type {import('vite').UserConfig}
@@ -41,6 +41,6 @@ const config = {
   test: {
     environment: 'happy-dom'
   }
-};
+}
 
-export default config;
+export default config

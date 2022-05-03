@@ -1,7 +1,7 @@
-import QuickOperation from '@/components/QuickOperation/QuickOperation';
-import { DownloadOutlined, EyeOutlined, PlusOutlined, SearchOutlined } from '@ant-design/icons';
-import { Button, Card, Form, Input, Select, Table } from 'antd';
-import { useState } from 'react';
+import QuickOperation from '@/components/QuickOperation/QuickOperation'
+import { PlusOutlined, SearchOutlined } from '@ant-design/icons'
+import { Button, Card, Form, Input, Table } from 'antd'
+import { useState } from 'react'
 
 const PermissionManagementPage = () => {
   const columns = [
@@ -26,30 +26,30 @@ const PermissionManagementPage = () => {
               编辑
             </Button>
           </div>
-        );
+        )
       }
     }
-  ];
+  ]
 
-  const data = [];
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  const data = []
+  const [selectedRowKeys, setSelectedRowKeys] = useState([])
 
   const rowSelection = {
     selectedRowKeys,
     onChange: (selectedRowKeys: any) => setSelectedRowKeys(selectedRowKeys)
-  };
+  }
 
   data.push({
     key: 1,
     group: '超级管理员',
     desc: '用户系统所有权限的角色'
-  });
+  })
 
   data.push({
     key: 2,
     group: '普通用户',
     desc: '可查看数据概况，诊断记录，可进行病情诊断'
-  });
+  })
 
   return (
     <div className="space-y-3">
@@ -81,7 +81,7 @@ const PermissionManagementPage = () => {
         <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
       </Card>
     </div>
-  );
-};
+  )
+}
 
-export default PermissionManagementPage;
+export default PermissionManagementPage

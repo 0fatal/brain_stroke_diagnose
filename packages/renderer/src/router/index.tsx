@@ -1,12 +1,13 @@
-import { Navigate, RouteObject, useRoutes } from 'react-router-dom';
-import ZLayout from '@/layout';
-import DiagnosePage from '@/pages/Diagnose';
-import RecordPage from '@/pages/Record';
-import DevicePage from '@/pages/Device';
-import AnalysisPage from '@/pages/Analysis';
-import UserManagementPage from '@/pages/Management/User';
-import PermissionManagementPage from '@/pages/Management/Permission';
-import LogManagementPage from '@/pages/Management/Log';
+import type { RouteObject } from 'react-router-dom'
+import { Navigate, useRoutes } from 'react-router-dom'
+import ZLayout from '@/layout'
+import DiagnosePage from '@/pages/Diagnose'
+import RecordPage from '@/pages/Record'
+import DevicePage from '@/pages/Device'
+import AnalysisPage from '@/pages/Analysis'
+import UserManagementPage from '@/pages/Management/User'
+import PermissionManagementPage from '@/pages/Management/Permission'
+import LogManagementPage from '@/pages/Management/Log'
 
 const routeTitleMap = {
   '/diagnose': '病情诊断',
@@ -16,12 +17,12 @@ const routeTitleMap = {
   '/management/user': '系统管理 / 用户管理',
   '/management/permission': '系统管理 / 权限管理',
   '/management/log': '系统管理 / 日志管理'
-} as const;
+} as const
 
 export const getRouteTitle = (route: string) => {
   // @ts-ignore
-  return routeTitleMap[route];
-};
+  return routeTitleMap[route]
+}
 
 const routes: RouteObject[] = [
   {
@@ -66,8 +67,8 @@ const routes: RouteObject[] = [
       }
     ]
   }
-];
+]
 
 export default function useAppRoutes() {
-  return useRoutes(routes);
+  return useRoutes(routes)
 }

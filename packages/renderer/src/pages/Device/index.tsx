@@ -1,7 +1,7 @@
-import QuickOperation from '@/components/QuickOperation/QuickOperation';
-import { DownloadOutlined, EyeOutlined, PlusOutlined, SearchOutlined } from '@ant-design/icons';
-import { Button, Card, Form, Input, Select, Table } from 'antd';
-import { useState } from 'react';
+import QuickOperation from '@/components/QuickOperation/QuickOperation'
+import { DownloadOutlined, EyeOutlined, PlusOutlined, SearchOutlined } from '@ant-design/icons'
+import { Button, Card, Form, Input, Select, Table } from 'antd'
+import { useState } from 'react'
 
 const DevicePage = () => {
   const columns = [
@@ -36,18 +36,18 @@ const DevicePage = () => {
               编辑
             </Button>
           </div>
-        );
+        )
       }
     }
-  ];
+  ]
 
-  const data = [];
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  const data = []
+  const [selectedRowKeys, setSelectedRowKeys] = useState([])
 
   const rowSelection = {
     selectedRowKeys,
     onChange: (selectedRowKeys: any) => setSelectedRowKeys(selectedRowKeys)
-  };
+  }
 
   for (let i = 0; i < 14; i++) {
     data.push({
@@ -55,7 +55,7 @@ const DevicePage = () => {
       deviceName: `设备${i + 1}`,
       deviceId: `YRJ00${34 + 1}`,
       hospital: '省第一医院'
-    });
+    })
   }
 
   return (
@@ -67,7 +67,7 @@ const DevicePage = () => {
             <Input placeholder="请输入设备名称" />
           </Form.Item>
           <Form.Item label="所属医院">
-            <Select placeholder="选择医院" onChange={() => {}}>
+            <Select placeholder="选择医院">
               <Select.Option value="省第一医院">省第一医院</Select.Option>
               <Select.Option value="省第二医院">省第二医院</Select.Option>
             </Select>
@@ -78,20 +78,20 @@ const DevicePage = () => {
           <Form.Item label="设备地址">
             <Input.Group compact>
               <Form.Item>
-                <Select placeholder="选择省份" onChange={() => {}}>
+                <Select placeholder="选择省份">
                   <Select.Option value="浙江省">浙江省</Select.Option>
                   <Select.Option value="安徽省">安徽省</Select.Option>
                   <Select.Option value="福建省">福建省</Select.Option>
                 </Select>
               </Form.Item>
               <Form.Item>
-                <Select placeholder="选择城市" onChange={() => {}}>
+                <Select placeholder="选择城市">
                   <Select.Option value="杭州市">杭州市</Select.Option>
                   <Select.Option value="宁波市">宁波市</Select.Option>
                 </Select>
               </Form.Item>
               <Form.Item>
-                <Select placeholder="选择县区" onChange={() => {}}>
+                <Select placeholder="选择县区">
                   <Select.Option value="上城区">上城区</Select.Option>
                   <Select.Option value="下城区">下城区</Select.Option>
                   <Select.Option value="钱塘区">钱塘区</Select.Option>
@@ -127,7 +127,7 @@ const DevicePage = () => {
         <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
       </Card>
     </div>
-  );
-};
+  )
+}
 
-export default DevicePage;
+export default DevicePage
