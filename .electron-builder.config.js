@@ -1,4 +1,4 @@
-const { version } = require('./package.json')
+const { version, name } = require('./package.json')
 
 // if (process.env.VITE_APP_VERSION === undefined) {
 //   const now = new Date()
@@ -17,7 +17,7 @@ const config = {
     buildResources: 'buildResources'
   },
   files: ['packages/**/dist/**'],
-  appId: 'com.zxy.${name}',
+  appId: `com.zxy.${name}`,
   productName: '脑卒中辅助诊断医疗系统',
   extraMetadata: {
     version: version
