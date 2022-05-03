@@ -83,6 +83,7 @@ jobs:
 
   upload_artifacts:
     needs: [ draft ]
+    permissions: write-all
 
     strategy:
       matrix:
