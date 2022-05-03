@@ -25,6 +25,8 @@ defaults:
 jobs:
 
   draft:
+    permissions: 
+      checks: read
     runs-on: ubuntu-latest
     outputs:
       release-note: ${{ steps.release-note.outputs.release-note }}
