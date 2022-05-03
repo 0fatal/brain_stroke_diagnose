@@ -95,13 +95,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: pnpm/action-setup@v2.1.0
-        with:
-          version: latest
-          run_install: true
+      # - uses: pnpm/action-setup@v2.1.0
+      #   with:
+      #     version: latest
+      #     run_install: true
 
-      - name: Install dependencies
-        run: pnpm i
+      # - name: Install dependencies
+      #   run: pnpm i
 
       # The easiest way to transfer release notes to a compiled application is create `release-notes.md` in the build resources.
       # See https://github.com/electron-userland/electron-builder/issues/1511#issuecomment-310160119
@@ -112,7 +112,7 @@ jobs:
 
       # Compile app and upload artifacts
       - name: Compile & release Electron app
-        uses: samuelmeuli/action-electron-builder@v1.6.0
+        uses: ZacharyWin/z-electron-builder@v0.0.1
         env:
           VITE_APP_VERSION: ${{ needs.draft.outputs.version }}
         with:
