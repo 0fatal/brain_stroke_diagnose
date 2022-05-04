@@ -32,7 +32,7 @@ const DevicePage = () => {
                 查看
               </div>
             </Button>
-            <Button type="primary" danger size="small">
+            <Button type="primary" danger size="small" className="!bg-[#FF7745]">
               编辑
             </Button>
           </div>
@@ -110,7 +110,7 @@ const DevicePage = () => {
         </div>
         <div className="w-full flex justify-end p-[10px]">
           <div className="flex space-x-1">
-            <Button type="primary">
+            <Button type="primary" className="!bg-[#72CE60]">
               <div className="flex items-center">
                 <DownloadOutlined className="mr-[4px]" />
                 导出

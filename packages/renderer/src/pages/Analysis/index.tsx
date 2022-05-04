@@ -24,7 +24,7 @@ const AnalysisPage = () => {
     <div className="space-y-3">
       <QuickOperation />
       <Card title="系统概况">
-        <div className="flex space-x-3">
+        <div className="flex space-x-[40px]">
           <div className="bg-[#FF7970] p-[15px] w-[340px] rounded-md flex items-center ">
             <img src={IconRecordCount} />
             <div className="text-white ml-4">

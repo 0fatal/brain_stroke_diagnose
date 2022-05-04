@@ -36,10 +36,10 @@ const UserManagementPage = () => {
                 查看
               </div>
             </Button>
-            <Button type="primary" size="small" danger>
+            <Button type="primary" size="small" className="!bg-[#FF7745]">
               编辑
             </Button>
-            <Button type="primary" size="small">
+            <Button type="primary" size="small" className="!bg-[#505559]">
               <div className="flex items-center">
                 <RedoOutlined className="mr-[4px]" />
                 重置

@@ -22,7 +22,7 @@ const PermissionManagementPage = () => {
       render: () => {
         return (
           <div className="flex space-x-1">
-            <Button type="primary" danger size="small">
+            <Button type="primary" danger size="small" className="!bg-[#FF7745]">
               编辑
             </Button>
           </div>
