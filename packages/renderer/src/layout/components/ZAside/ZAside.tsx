@@ -18,7 +18,7 @@ const ZAside = () => {
     <Layout>
       <Header className="!px-[10px]  text-center !leading-none !h-[100px] border-b-[1px] border-gray-500 !py-[20px]">
         <h1 className="!text-white text-lg">缺血性脑卒中</h1>
-        <h2 className="!text-white text-lg">辅助诊断医疗系统</h2>
+        <h2 className="!text-white text-lg">辅助诊断系统</h2>
       </Header>
       <Menu
         theme="dark"

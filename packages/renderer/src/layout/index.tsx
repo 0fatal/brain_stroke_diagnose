@@ -1,5 +1,6 @@
+import { isLogin } from '@/utils/store'
 import { Layout } from 'antd'
-import { Outlet } from 'react-router-dom'
+import { Navigate, Outlet, useNavigate } from 'react-router-dom'
 import ZAside from './components/ZAside/ZAside'
 import ZHeader from './components/ZHeader/ZHeader'
 import './index.scss'
@@ -7,6 +8,10 @@ import './index.scss'
 const { Sider, Content } = Layout
 
 const ZLayout = () => {
+  const navigate = useNavigate()
+  if (!isLogin()) {
+    navigate('/login', { replace: true })
+  }
   return (
     <Layout className="layout fixed top-0 bottom-0 left-0 right-0">
       <Sider width={170}>

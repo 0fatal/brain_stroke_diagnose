@@ -8,6 +8,7 @@ import AnalysisPage from '@/pages/Analysis'
 import UserManagementPage from '@/pages/Management/User'
 import PermissionManagementPage from '@/pages/Management/Permission'
 import LogManagementPage from '@/pages/Management/Log'
+import LoginPage from '@/pages/Login'
 
 const routeTitleMap = {
   '/diagnose': '病情诊断',
@@ -58,14 +59,18 @@ const routes: RouteObject[] = [
       },
       {
         path: '/analysis',
-        element: <AnalysisPage />,
-        index: true
+        element: <AnalysisPage />
       },
+
       {
         path: '/',
         element: <Navigate to="/analysis" replace />
       }
     ]
+  },
+  {
+    path: '/login',
+    element: <LoginPage />
   }
 ]
 

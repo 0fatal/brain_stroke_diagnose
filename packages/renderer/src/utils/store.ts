@@ -11,3 +11,7 @@ export const setToken = (token: string) => {
 export const rmToken = () => {
   localStorage.removeItem(tokenKey)
 }
+
+export const isLogin = () => {
+  return !!getToken()
+}
