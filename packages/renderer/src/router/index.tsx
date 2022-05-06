@@ -1,14 +1,19 @@
 import type { RouteObject } from 'react-router-dom'
 import { Navigate, useRoutes } from 'react-router-dom'
 import ZLayout from '@/layout'
-import DiagnosePage from '@/pages/Diagnose'
-import RecordPage from '@/pages/Record'
-import DevicePage from '@/pages/Device'
+import { lazy } from 'react'
+import SuspenseComponent from '@/components/SuspenseComponent/SuspenseComponent'
+
 import AnalysisPage from '@/pages/Analysis'
-import UserManagementPage from '@/pages/Management/User'
-import PermissionManagementPage from '@/pages/Management/Permission'
-import LogManagementPage from '@/pages/Management/Log'
-import LoginPage from '@/pages/Login'
+const DiagnosePage = SuspenseComponent(lazy(() => import('@/pages/Diagnose')))
+const RecordPage = SuspenseComponent(lazy(() => import('@/pages/Record')))
+const DevicePage = SuspenseComponent(lazy(() => import('@/pages/Device')))
+const UserManagementPage = SuspenseComponent(lazy(() => import('@/pages/Management/User')))
+const PermissionManagementPage = SuspenseComponent(
+  lazy(() => import('@/pages/Management/Permission'))
+)
+const LogManagementPage = SuspenseComponent(lazy(() => import('@/pages/Management/Log')))
+const LoginPage = SuspenseComponent(lazy(() => import('@/pages/Login')))
 
 const routeTitleMap = {
   '/diagnose': '病情诊断',
