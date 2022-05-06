@@ -6,6 +6,7 @@ import {
   SettingOutlined
 } from '@ant-design/icons'
 import { Layout, Menu } from 'antd'
+import { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 const { Header } = Layout
@@ -13,6 +14,13 @@ const { Header } = Layout
 const ZAside = () => {
   const location = useLocation()
   const navigate = useNavigate()
+
+  const [defaultSelectedKeys, setDefaultSelectedKeys] = useState<string[]>([])
+
+  useEffect(() => {
+    console.log('location', location)
+    setDefaultSelectedKeys([location.pathname])
+  }, [location.pathname])
 
   return (
     <Layout>
@@ -23,7 +31,7 @@ const ZAside = () => {
       <Menu
         theme="dark"
         mode="inline"
-        defaultSelectedKeys={[location.pathname]}
+        selectedKeys={defaultSelectedKeys}
         onClick={(e) => {
           console.log(e)
           navigate(e.key)
