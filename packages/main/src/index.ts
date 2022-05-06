@@ -1,10 +1,12 @@
 import { app } from 'electron';
 import './security-restrictions';
 import { restoreOrCreateWindow } from '/@/mainWindow';
+import { initIpcHandler } from './ipc';
 
 /**
  * Prevent multiple instances
  */
+
 const isSingleInstance = app.requestSingleInstanceLock();
 if (!isSingleInstance) {
   app.quit();
@@ -64,3 +66,5 @@ if (import.meta.env.PROD) {
     .then(({ autoUpdater }) => autoUpdater.checkForUpdatesAndNotify())
     .catch((e) => console.error('Failed check updates:', e));
 }
+
+initIpcHandler();
