@@ -1,4 +1,4 @@
-import { Button, Card, Divider, Form, Image, Input, message } from 'antd'
+import { Button, Card, Divider, Form, Input, message } from 'antd'
 import { useState } from 'react'
 import { setToken } from '@/utils/store'
 import { useNavigate } from 'react-router-dom'

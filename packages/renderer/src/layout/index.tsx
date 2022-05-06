@@ -1,6 +1,6 @@
 import { isLogin } from '@/utils/store'
 import { Layout } from 'antd'
-import { Navigate, Outlet, useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import ZAside from './components/ZAside/ZAside'
 import ZHeader from './components/ZHeader/ZHeader'
 import './index.scss'

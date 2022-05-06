@@ -2,7 +2,7 @@ import ObjectSelect from './components/ObjectSelect/ObjectSelect'
 import moment from 'moment'
 import { useState } from 'react'
 import DiagnosePanel from './components/DiagnosePanel/DiagnosePanel'
-import { ObjInfo } from './define'
+import type { ObjInfo } from './define'
 import { Affix, Button } from 'antd'
 import { ArrowLeftOutlined } from '@ant-design/icons'
 

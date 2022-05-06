@@ -2,7 +2,7 @@ import { getRouteTitle } from '@/router'
 import { rmToken } from '@/utils/store'
 import { DownOutlined } from '@ant-design/icons'
 import { Dropdown, Menu, message } from 'antd'
-import { Navigate, useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const ZHeader = () => {
   const location = useLocation()

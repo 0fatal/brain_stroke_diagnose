@@ -1,10 +1,11 @@
 import { SearchOutlined } from '@ant-design/icons'
 import { useReactive } from 'ahooks'
 import { Button, Card, DatePicker, Form, Input, Select, Table } from 'antd'
-import { FC, useEffect, useState } from 'react'
-import { RangeValue } from 'rc-picker/lib/interface.d'
-import { Moment } from 'moment'
-import { ObjInfo } from '../../define'
+import type { FC } from 'react'
+import { useEffect, useState } from 'react'
+import type { RangeValue } from 'rc-picker/lib/interface.d'
+import type { Moment } from 'moment'
+import type { ObjInfo } from '../../define'
 
 interface IProps {
   data: ObjInfo[]
