@@ -10,11 +10,11 @@ const RecordPage = () => {
       dataIndex: 'key'
     },
     {
-      title: '患者姓名',
+      title: '就诊者姓名',
       dataIndex: 'name'
     },
     {
-      title: '患者身份证号',
+      title: '就诊者身份证号',
       dataIndex: 'idCard'
     },
     {
@@ -75,8 +75,8 @@ const RecordPage = () => {
       <QuickOperation />
       <Card>
         <Form layout="inline">
-          <Form.Item label="患者名称">
-            <Input placeholder="请输入患者名称" />
+          <Form.Item label="就诊者名称">
+            <Input placeholder="请输入就诊者名称" />
           </Form.Item>
           <Form.Item label="就诊医院">
             <Select placeholder="选择医院" onChange={() => {}}>
